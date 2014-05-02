@@ -1,4 +1,4 @@
-<div class="vine ui-widget-content" data-id="<%= clip.id %>" style="top: <%= clip.top %>; left: <%= clip.left %>; position: absolute; z-index: <%= clip.z_index %>">
+<div class="vine ui-widget-content" data-id="<%= clip.id %>" style="top: <%= clip.top %>px; left: <%= clip.left %>px; position: absolute; z-index: <%= clip.z_index %>; width: <%= clip.width %>px; height: <%= clip.height %>px;">
   <div class="btn-group controls">
     <a class="dropdown-toggle" data-toggle="dropdown" style="color: #149c82; font-size: 34px; cursor: pointer">
       <span class="glyphicon glyphicon-cog"></span>
@@ -16,12 +16,12 @@
       </li>
 
       <li>
-        <%= link_to "Delete", montage_clip_path(clip.montage, clip), :method => :delete, :remote => true %>
+        <%= link_to "Delete", clip_path(clip), :method => :delete, :remote => true %>
       </li>
     </ul>
   </div>
 
   <div class="video" style="opacity: <%= clip.opacity %>; ">
-    <video controls loop preload="auto" src="<%= clip.vine_video_url %>" width="535" height="535"></video>
+    <video controls loop preload="auto" src="<%= clip.vine_video_url %>" style="width: <%= clip.width %>px; height: <%= clip.height %>px;"></video>
   </div>
 </div>

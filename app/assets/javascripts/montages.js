@@ -1,5 +1,14 @@
 function activateVine($vine){
-  $vine.draggable();
+  $vine.draggable({
+    stop: function(event, ui){
+      var clip_id = $(this).data("id");
+      $.ajax('/clips/' + clip_id, {
+        method: 'PATCH',
+        data: ui.position
+      });
+    }
+  });
+
   $vine.resizable({
     resize: function( event, ui ) {
       $(this).find("video").css(ui.size);
@@ -8,6 +17,14 @@ function activateVine($vine){
       // console.log(ui.size)
     },
     aspectRatio: true,
+    stop: function(event, ui){
+      var clip_id = $(this).data("id");
+      $.ajax('/clips/' + clip_id, {
+        method: 'PATCH',
+        data: ui.size
+      });
+    }
+
   });
 
   $vine.find('.o-slider').slider({ 
@@ -18,6 +35,11 @@ function activateVine($vine){
     orientation: "horizontal",
       slide: function(e,ui){
         $(this).parents("div.vine").find("div.video").css('opacity', ui.value)
+        var clip_id = $(this).parents("div.vine").data("id");
+        $.ajax('/clips/' + clip_id, {
+          method: 'PATCH',
+          data: {opacity: ui.value}
+        });
       }                
   });
 
@@ -29,6 +51,11 @@ function activateVine($vine){
     orientation: "horizontal",
       slide: function(e,ui){
         $(this).parents("div.vine").css('z-index', ui.value)
+        var clip_id = $(this).parents("div.vine").data("id");
+        $.ajax('/clips/' + clip_id, {
+          method: 'PATCH',
+          data: {'z_index': ui.value}
+        });
       }                
   });
 }

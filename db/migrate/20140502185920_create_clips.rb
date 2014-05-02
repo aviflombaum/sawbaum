@@ -8,6 +8,8 @@ class CreateClips < ActiveRecord::Migration
       t.string :left
       t.string :top
       t.string :shape
+      t.string :width
+      t.string :height
       
       t.timestamps
     end

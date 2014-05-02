@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  get 'clips/create'
-
-  get 'clips/destroy'
-
-  resources :montages do
-    resources :clips, :only => [:create, :destroy]
+  resources :montages, :shallow => true do
+    resources :clips, :only => [:create, :destroy, :update]
   end
   
   root 'montages#new'

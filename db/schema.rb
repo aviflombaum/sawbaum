@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20140502185920) do
     t.string   "left"
     t.string   "top"
     t.string   "shape"
+    t.string   "width"
+    t.string   "height"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
