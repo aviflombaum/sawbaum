@@ -1,6 +1,15 @@
 div.vine{
-  padding: 10px;
   border: 1px black solid;
   width: 535px;
   height: 535px;
+  cursor: move;
 }
+
+div.vine .controls{
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+}
+
+.o-slider { width: 200px; }
+.z-slider { width: 200px; }
