@@ -1,4 +1,9 @@
-<div class="vine ui-widget-content">
+<%= form_tag(vines_path, :remote => true, :method => :get) do %>
+  <input type="text" name="vine_url">
+  <input type="submit">
+<% end %>
+
+<!-- <div class="vine ui-widget-content">
   <div class="btn-group controls">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
       <span class="glyphicon glyphicon-cog"></span>
@@ -51,3 +56,5 @@
 
 
 
+
+ -->

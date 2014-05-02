@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :montages
   
   root 'montages#new'
-
+  get '/vines' => 'montages#vines'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

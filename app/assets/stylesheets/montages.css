@@ -3,6 +3,7 @@ div.vine{
   width: 535px;
   height: 535px;
   cursor: move;
+  background: transparent;
 }
 
 div.vine .controls{

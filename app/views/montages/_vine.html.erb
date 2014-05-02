@@ -1,0 +1,24 @@
+<div class="vine ui-widget-content">
+  <div class="btn-group controls">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-cog"></span>
+    </button>
+    
+    <ul class="dropdown-menu pull-right" role="menu">
+      <li>
+        <strong style="display: block">Opacity</strong>
+        <div class="o-slider">
+      </li>
+      
+      <li>
+        <strong style="display: block">Z-Index</strong>
+        <div class="z-slider">
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="video">
+    <video controls loop preload="auto" src="<%= @vine_video_url %>" width="535" height="535"></video>
+  </div>
+</div>
