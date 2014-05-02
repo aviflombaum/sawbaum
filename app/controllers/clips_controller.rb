@@ -7,5 +7,8 @@ class ClipsController < ApplicationController
   end
 
   def destroy
+    @montage = Montage.find_by(:slug => params[:montage_id])
+    @clip = @montage.clips.find(params[:id])
+    @clip.destroy
   end
 end
