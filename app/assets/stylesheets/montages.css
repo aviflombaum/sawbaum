@@ -1,3 +1,7 @@
+div.navbar{
+  border-radius: 0;
+}
+
 div.vine{
   border: 1px black solid;
   width: 535px;

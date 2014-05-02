@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  resources :montages
+  get 'clips/create'
+
+  get 'clips/destroy'
+
+  resources :montages do
+    resources :clips, :only => [:create, :destroy]
+  end
   
   root 'montages#new'
-  get '/vines' => 'montages#vines'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

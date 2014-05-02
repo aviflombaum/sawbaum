@@ -1,60 +1,29 @@
-<%= form_tag(vines_path, :remote => true, :method => :get) do %>
-  <input type="text" name="vine_url">
-  <input type="submit">
-<% end %>
-
-<!-- <div class="vine ui-widget-content">
-  <div class="btn-group controls">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-cog"></span>
-    </button>
-    
-    <ul class="dropdown-menu pull-right" role="menu">
-      <li>
-        <strong style="display: block">Opacity</strong>
-        <div class="o-slider">
-      </li>
-      
-      <li>
-        <strong style="display: block">Z-Index</strong>
-        <div class="z-slider">
-      </li>
-
-    </ul>
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Vinellage</a>
   </div>
-
-  <div class="video">
-    <video controls loop preload="auto" src="https://v.cdn.vine.co/r/videos/09E106BD791073665467232698368_14dd8406fe9.3.4.mp4?versionId=ZunFclXAlgzPb0PwFa_hefG7ImKxcJOl" width="535" height="535"></video>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Make Your Own!!!</a></li>
+    </ul>
   </div>
 </div>
 
+<div class="container">
+  <div class="col-lg-12">
+    <div class="bs-component">
+      <div class="well bs-component">
+        <%= form_for @montage, :class => "form-horizontal" do |f| %>
+          <fieldset>
+            <div class="form-group">
+              <%= f.text_field :name, :class => "form-control input-lg", :placeholder => "Name Your Collage" %>
+            </div>
 
-<div class="vine ui-widget-content">
-  <div class="btn-group controls">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-      <span class="glyphicon glyphicon-cog"></span>
-    </button>
-    
-    <ul class="dropdown-menu pull-right" role="menu">
-      <li>
-        <strong style="display: block">Opacity</strong>
-        <div class="o-slider">
-      </li>
-      
-      <li>
-        <strong style="display: block">Z-Index</strong>
-        <div class="z-slider">
-      </li>
-
-    </ul>
-  </div>
-
-  <div class="video">
-    <video controls loop preload="auto" src="https://v.cdn.vine.co/r/videos/09E106BD791073665467232698368_14dd8406fe9.3.4.mp4?versionId=ZunFclXAlgzPb0PwFa_hefG7ImKxcJOl" width="535" height="535"></video>
+            <div class="form-group">
+             <button type="button" class="btn btn-primary btn-lg btn-block">Get Started!!!</button>
+            </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
-
-
-
-
- -->

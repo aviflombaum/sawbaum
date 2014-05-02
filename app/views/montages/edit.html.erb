@@ -1,0 +1,87 @@
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Vinellage</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><%= link_to @montage.name, @montage, :class => "navbar-brand" %></li>
+    <li><a href="#">Make a New One!!!</a></li>
+  </ul>
+  
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add a Vine +</a>
+        <ul class="dropdown-menu" style="width: 400px">
+          <li style="padding: 10px">
+            <%= form_tag(montage_clips_path(@montage), :remote => true) do %>
+              <div class="input-group">
+                <input type="text" class="form-control" name="vine_url" placeholder="Link to Vine">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="submit">Add!</button>
+                </span>
+              </div>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- <div class="vine ui-widget-content">
+  <div class="btn-group controls">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-cog"></span>
+    </button>
+    
+    <ul class="dropdown-menu pull-right" role="menu">
+      <li>
+        <strong style="display: block">Opacity</strong>
+        <div class="o-slider">
+      </li>
+      
+      <li>
+        <strong style="display: block">Z-Index</strong>
+        <div class="z-slider">
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="video">
+    <video controls loop preload="auto" src="https://v.cdn.vine.co/r/videos/09E106BD791073665467232698368_14dd8406fe9.3.4.mp4?versionId=ZunFclXAlgzPb0PwFa_hefG7ImKxcJOl" width="535" height="535"></video>
+  </div>
+</div>
+
+
+<div class="vine ui-widget-content">
+  <div class="btn-group controls">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-cog"></span>
+    </button>
+    
+    <ul class="dropdown-menu pull-right" role="menu">
+      <li>
+        <strong style="display: block">Opacity</strong>
+        <div class="o-slider">
+      </li>
+      
+      <li>
+        <strong style="display: block">Z-Index</strong>
+        <div class="z-slider">
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="video">
+    <video controls loop preload="auto" src="https://v.cdn.vine.co/r/videos/09E106BD791073665467232698368_14dd8406fe9.3.4.mp4?versionId=ZunFclXAlgzPb0PwFa_hefG7ImKxcJOl" width="535" height="535"></video>
+  </div>
+</div>
+
+
+
+
+ -->

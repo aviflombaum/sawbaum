@@ -11,9 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502162413) do
+ActiveRecord::Schema.define(version: 20140502185920) do
+
+  create_table "clips", force: true do |t|
+    t.integer  "montage_id"
+    t.string   "vine_video_url"
+    t.string   "opacity"
+    t.string   "z_index"
+    t.string   "left"
+    t.string   "top"
+    t.string   "shape"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "montages", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

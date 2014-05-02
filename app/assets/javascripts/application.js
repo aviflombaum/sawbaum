@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require bootstrap
+//= require flatly-bootstrap-rails
 //= require_tree .

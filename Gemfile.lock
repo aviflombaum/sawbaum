@@ -64,6 +64,9 @@ GEM
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     ffi (1.9.3)
+    flatly-bootstrap-rails (0.0.1)
+      railties (>= 3.1)
+      thor
     google-analytics-rails (0.0.5)
     hike (1.2.3)
     i18n (0.6.9)
@@ -192,6 +195,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   factory_girl_rails
+  flatly-bootstrap-rails
   google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
