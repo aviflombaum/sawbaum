@@ -30,10 +30,15 @@
     <ul class="list-group">
       <% Montage.all.each do |montage| %>
         <li class="list-group-item">
-          <span class="badge"><%= link_to "Edit", edit_montage_path(montage) %></span>
-          <%= link_to montage.name, montage, :class => "list-group-item" %>
+          <span style="float: right;">
+            <%= link_to "", edit_montage_path(montage), :class => "glyphicon glyphicon-pencil" %>
+            <%= link_to "", montage_path(montage), :method => :delete, :class => "glyphicon glyphicon-remove" %>
+          </span>
+          <%= link_to montage.name, montage %>
         </li>          
       <% end %>
     </ul>
   </div>
 </div>
+
+<span class=></span>

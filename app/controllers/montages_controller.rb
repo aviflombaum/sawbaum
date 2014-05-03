@@ -17,6 +17,12 @@ class MontagesController < ApplicationController
     @montage = Montage.find_by(:slug => params[:id])
   end
 
+  def destroy
+    @montage = Montage.find_by(:slug => params[:id])
+    @montage.destroy
+    redirect_to :back
+  end
+
   def show
     @montage = Montage.find_by(:slug => params[:id])
   end
