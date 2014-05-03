@@ -27,10 +27,13 @@
     </div>
 
     <h1 style="text-align: center">See Some of Our Favorites</h1>
-    <div class="list-group">
+    <ul class="list-group">
       <% Montage.all.each do |montage| %>
-        <%= link_to montage.name, montage, :class => "list-group-item" %>
+        <li class="list-group-item">
+          <span class="badge"><%= link_to "Edit", edit_montage_path(montage) %></span>
+          <%= link_to montage.name, montage, :class => "list-group-item" %>
+        </li>          
       <% end %>
-    </div>
+    </ul>
   </div>
 </div>
