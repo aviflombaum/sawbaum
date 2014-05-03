@@ -1,4 +1,4 @@
-function activateVine($vine){
+function activateVine($vine, opacity_start, z_index_start){
   $vine.draggable({
     stop: function(event, ui){
       var clip_id = $(this).data("id");
