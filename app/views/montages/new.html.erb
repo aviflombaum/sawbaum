@@ -29,6 +29,7 @@
     <h1 style="text-align: center">See Some of Our Favorites</h1>
     <ul class="list-group">
       <% Montage.all.each do |montage| %>
+        <% next if montage.name.blank? %>
         <li class="list-group-item">
           <span style="float: right;">
             <%= link_to "", edit_montage_path(montage), :class => "glyphicon glyphicon-pencil" %>
