@@ -3,9 +3,8 @@ div.navbar{
 }
 
 div.vine{
-  border: 1px black solid;
-  width: 535px;
-  height: 535px;
+  margin-bottom: -8px;
+  margin-top: -2px;
   cursor: move;
   background: transparent;
 }
@@ -14,6 +13,11 @@ div.vine .controls{
   z-index: 1000;
   position: absolute;
   right: 0;
+}
+
+div.vine div.video{
+  margin-bottom: -7px;
+  margin-top: -2px;
 }
 
 .o-slider { width: 200px; }

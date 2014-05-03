@@ -33,14 +33,16 @@ function activateVine($vine){
     step: 0.01, 
     value: 1,
     orientation: "horizontal",
-      slide: function(e,ui){
-        $(this).parents("div.vine").find("div.video").css('opacity', ui.value)
-        var clip_id = $(this).parents("div.vine").data("id");
-        $.ajax('/clips/' + clip_id, {
-          method: 'PATCH',
-          data: {opacity: ui.value}
-        });
-      }                
+    slide: function(e,ui){
+      $(this).parents("div.vine").find("div.video").css('opacity', ui.value)
+    },
+    stop: function(e,ui){
+      var clip_id = $(this).parents("div.vine").data("id");
+      $.ajax('/clips/' + clip_id, {
+        method: 'PATCH',
+        data: {opacity: ui.value}
+      });
+    }
   });
 
   $vine.find('.z-slider').slider({ 
@@ -49,14 +51,16 @@ function activateVine($vine){
     step: 1, 
     value: 1,
     orientation: "horizontal",
-      slide: function(e,ui){
-        $(this).parents("div.vine").css('z-index', ui.value)
-        var clip_id = $(this).parents("div.vine").data("id");
-        $.ajax('/clips/' + clip_id, {
-          method: 'PATCH',
-          data: {'z_index': ui.value}
-        });
-      }                
+    slide: function(e,ui){
+      $(this).parents("div.vine").css('z-index', ui.value)
+    },
+    stop: function(e,ui){
+      var clip_id = $(this).parents("div.vine").data("id");
+      $.ajax('/clips/' + clip_id, {
+        method: 'PATCH',
+        data: {'z_index': ui.value}
+      });
+    }
   });
 }
 
