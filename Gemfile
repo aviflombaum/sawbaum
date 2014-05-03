@@ -52,6 +52,9 @@ group :test, :development do
   gem "pry"
 end
 
+gem 'unicorn'
+
+
 group :production do
   gem "pg"
   gem "google-analytics-rails"
