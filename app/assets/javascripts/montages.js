@@ -91,4 +91,10 @@ $(function(){
   $("div.vine").each(function(){
     activateVine($(this), $(this).find("div.video").css("opacity"), $(this).css("z-index"))
   })
+
+  $("div.vine-show").each(function(){
+    var $video = $(this).find("video")
+    $video.prop('muted', true);
+    $video[0].play();
+  })
 });

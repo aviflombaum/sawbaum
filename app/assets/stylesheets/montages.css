@@ -2,7 +2,7 @@ div.navbar{
   border-radius: 0;
 }
 
-div.vine{
+div.vine, div.vine-show{
   cursor: move;
   background: transparent;
   border: 0;

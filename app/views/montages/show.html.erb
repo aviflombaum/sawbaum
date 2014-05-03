@@ -1,0 +1,7 @@
+<% @montage.clips.each do |clip| %>
+<div class="vine-show" data-id="<%= clip.id %>" style="top: <%= clip.top.to_i-80 %>px; left: <%= clip.left %>px; position: absolute; z-index: <%= clip.z_index %>; cursor: default;">
+  <div class="video" style="opacity: <%= clip.opacity %>; ">
+    <video loop preload="auto" src="<%= clip.vine_video_url %>" style="width: <%= clip.width %>px; height: <%= clip.height %>px;"></video>
+  </div>
+</div>
+<% end %>
