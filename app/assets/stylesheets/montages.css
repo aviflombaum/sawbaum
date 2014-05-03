@@ -3,22 +3,37 @@ div.navbar{
 }
 
 div.vine{
-  margin-bottom: -8px;
-  margin-top: -2px;
   cursor: move;
   background: transparent;
+  border: 0;
 }
 
 div.vine .controls{
   z-index: 1000;
   position: absolute;
-  right: 0;
+  right: 4px;
+  top: 0px;
+  display: none;
 }
 
 div.vine div.video{
-  margin-bottom: -7px;
-  margin-top: -2px;
+
 }
 
+div.controls ul.dropdown-menu li{
+  margin-bottom: 8px;
+}
+
+span.play{
+  position: absolute; top:45%; left:45%; color: #FFF; font-size: 40px;
+  display: none;
+}
+span.play:hover{
+  cursor: pointer;
+}
+.ui-resizable-handle.ui-resizable-se.ui-icon.ui-icon-gripsmall-diagonal-se {
+  right: 3px;
+  bottom: 6px;
+}
 .o-slider { width: 200px; }
 .z-slider { width: 200px; }

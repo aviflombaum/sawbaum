@@ -1,4 +1,4 @@
 $("body").append("<%= j render @clip %>");
-activateVine($("div.vine[data-id=<%= @clip.id %>]"));
+activateVine($("div.vine[data-id=<%= @clip.id %>]"), 1, 50);
 
 $("div.vine[data-id=<%= @clip.id %>]").css({'left': '500px', 'top': '60px'});

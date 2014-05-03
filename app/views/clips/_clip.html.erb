@@ -4,24 +4,25 @@
       <span class="glyphicon glyphicon-cog"></span>
     </a>
     
-    <ul class="dropdown-menu pull-right" role="menu">
+    <ul class="dropdown-menu pull-right" role="menu" style="padding: 8px">
       <li>
         <strong style="display: block">Opacity</strong>
-        <div class="o-slider">
+        <div class="o-slider"></div>
       </li>
-      
       <li>
         <strong style="display: block">Z-Index</strong>
-        <div class="z-slider">
+        <div class="z-slider"></div>
       </li>
 
       <li>
-        <%= link_to "Delete", clip_path(clip), :method => :delete, :remote => true %>
+        <%= button_to "Delete", clip_path(clip), :method => :delete, :remote => true, :class => "btn btn-danger btn-xs btn-block" %>
       </li>
     </ul>
   </div>
 
   <div class="video" style="opacity: <%= clip.opacity %>; ">
-    <video controls loop preload="auto" src="<%= clip.vine_video_url %>" style="width: <%= clip.width %>px; height: <%= clip.height %>px;"></video>
+    <span class="play glyphicon glyphicon-play"></span>
+
+    <video loop preload="auto" src="<%= clip.vine_video_url %>" style="width: <%= clip.width %>px; height: <%= clip.height %>px;"></video>
   </div>
 </div>

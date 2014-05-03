@@ -1,4 +1,8 @@
 function activateVine($vine, opacity_start, z_index_start){
+  if (z_index_start == 'auto'){
+    z_index_start = 50;
+  };
+
   $vine.draggable({
     stop: function(event, ui){
       var clip_id = $(this).data("id");
@@ -31,7 +35,7 @@ function activateVine($vine, opacity_start, z_index_start){
     min: 0, 
     max: 1, 
     step: 0.01, 
-    value: 1,
+    value: opacity_start,
     orientation: "horizontal",
     slide: function(e,ui){
       $(this).parents("div.vine").find("div.video").css('opacity', ui.value)
@@ -49,7 +53,7 @@ function activateVine($vine, opacity_start, z_index_start){
     min: 0, 
     max: 100, 
     step: 1, 
-    value: 1,
+    value: z_index_start,
     orientation: "horizontal",
     slide: function(e,ui){
       $(this).parents("div.vine").css('z-index', ui.value)
@@ -62,10 +66,29 @@ function activateVine($vine, opacity_start, z_index_start){
       });
     }
   });
+
+  $vine.find("span.play").on("click", function(){
+    if ($(this).is(".glyphicon-play")){
+      $vine.find("video")[0].play();  
+      $(this).removeClass("glyphicon-play").addClass("glyphicon-pause")
+    } else if ($(this).is(".glyphicon-pause")) {
+      $vine.find("video")[0].pause();  
+      $(this).addClass("glyphicon-play").removeClass("glyphicon-pause")
+    }    
+  });
+
+  $vine.hover(function(){
+    $(this).find("span.play").show();
+    $(this).find("div.controls").show();
+  }, function(){
+    $(this).find("span.play").hide();
+    $(this).find("div.controls").hide();    
+  })
+
 }
 
 $(function(){
   $("div.vine").each(function(){
-    activateVine($(this))
+    activateVine($(this), $(this).find("div.video").css("opacity"), $(this).css("z-index"))
   })
 });
