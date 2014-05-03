@@ -25,5 +25,12 @@
         <% end %>
       </div>
     </div>
+
+    <h1 style="text-align: center">See Some of Our Favorites</h1>
+    <div class="list-group">
+      <% Montage.all.each do |montage| %>
+        <%= link_to montage.name, montage, :class => "list-group-item" %>
+      <% end %>
+    </div>
   </div>
 </div>
