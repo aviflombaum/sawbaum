@@ -1,7 +1,8 @@
 class Montage < ActiveRecord::Base
   has_many :clips
   before_create :make_slug
-  
+  # validates :name, :presence => true
+
   def to_param
     self.slug
   end
