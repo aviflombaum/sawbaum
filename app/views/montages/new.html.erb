@@ -16,7 +16,7 @@
         <%= form_for @montage, :class => "form-horizontal" do |f| %>
           <fieldset>
             <div class="form-group">
-              <%= f.text_field :name, :class => "form-control input-lg", :placeholder => "Name Your Collage" %>
+              <%= f.text_field :name, :class => "form-control input-lg", :placeholder => "Name Your Collage", required: :true %>
             </div>
 
             <div class="form-group">
